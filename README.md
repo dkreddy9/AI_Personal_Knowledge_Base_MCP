@@ -29,6 +29,30 @@ The service currently uses the **`all-mpnet-base-v2`** Sentence Transformer mode
 *   **Gemini CLI:** The Gemini Command Line Interface is required to interact with the service.
 *   **PostgreSQL with Pgvector:** A PostgreSQL database with the `pgvector` extension installed and enabled.
 
+### Environment Variables
+
+Before running the application, you need to create a `.env` file in the root of the project to store your configuration.
+
+1.  Create a file named `.env`.
+2.  Copy the template below into the file and replace the placeholder values with your actual credentials.
+
+**`.env` Template:**
+```
+POSTGRES_HOST=your_postgres_host
+POSTGRES_PORT=5432
+POSTGRES_DATABASE=postgres
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=your_secret_password
+```
+
+**Variable Descriptions:**
+
+*   `POSTGRES_HOST`: The hostname or IP address of your PostgreSQL server (e.g., `localhost` or `PgVectorDB`).
+*   `POSTGRES_PORT`: The port on which your PostgreSQL server is running (default is `5432`).
+*   `POSTGRES_DATABASE`: The name of the database you want to connect to.
+*   `POSTGRES_USER`: The username for your PostgreSQL database.
+*   `POSTGRES_PASSWORD`: The password for the specified user. This should be kept secret.
+
 ### Docker Commands
 
 Follow these steps to build and run the embedding service using Docker:
